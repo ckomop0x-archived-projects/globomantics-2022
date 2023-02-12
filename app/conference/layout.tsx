@@ -1,15 +1,12 @@
 import styles from './styles.module.scss'
+import {FC, PropsWithChildren} from "react";
 
-export default function ConferenceLayout({ children }) {
+const ConferenceLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <>
-      <header className={styles.header}>
-        <h1>Globomantics maniacally taking tech to the globe</h1>
-      </header>
       <section>
         {children}
       </section>
-    </>
   );
 }
 
+export default ConferenceLayout
